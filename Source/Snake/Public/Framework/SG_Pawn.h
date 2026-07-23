@@ -1,0 +1,33 @@
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Pawn.h"
+#include "Core/Types.h"
+#include "SG_Pawn.generated.h"
+
+class UCameraComponent;
+
+UCLASS()
+class SNAKE_API ASG_Pawn : public APawn
+{
+    GENERATED_BODY()
+
+public:
+    ASG_Pawn();
+
+    void UpdateLocation(const Snake::Dim& InDim, int32 InCellSize, const FTransform& InGridOrigin);
+
+protected:
+    UPROPERTY(VisibleAnywhere)
+    TObjectPtr<USceneComponent> Origin;
+
+    UPROPERTY(VisibleAnywhere)
+    TObjectPtr<UCameraComponent> Camera;
+
+private:
+    void OnViewportResized(FViewport* Viewport, uint32 Val);
+
+    Snake::Dim Dim;
+    int32 CellSize;
+    FTransform GridOrigin;
+};
