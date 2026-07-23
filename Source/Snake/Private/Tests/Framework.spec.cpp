@@ -35,9 +35,7 @@ void FSnakeFramework::Define()
                     TestNotNull("Game mode set up", Cast<ASG_GameMode>(World->GetAuthGameMode()));
                     TestNotNull("Snake pawn set up", Cast<ASG_Pawn>(World->GetFirstPlayerController()->GetPawn()));
                 });
-            xIt("PawnLocationShouldBeAdjustCorrectly", [this]() { 
-                
-                });
+            xIt("PawnLocationShouldBeAdjustCorrectly", [this]() {});
         });
 }
 
