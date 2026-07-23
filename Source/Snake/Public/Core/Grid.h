@@ -12,6 +12,10 @@ public:
     Grid(const Dim& dim);
     ~Grid() = default;
 
+    /**
+     * Returns grid dimensions including walls (width + 2; height + 2)
+     * @return Dim  grid dimensions
+     */
     Dim dim() const { return m_dim; }
 
 private:
