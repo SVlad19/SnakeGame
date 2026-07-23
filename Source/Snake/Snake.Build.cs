@@ -15,7 +15,6 @@ public class Snake : ModuleRules
             PublicDependencyModuleNames.Add("FunctionalTesting");
         }
 
-        PrivateDependencyModuleNames.AddRange(new string[] { });
-
+        PrivateDependencyModuleNames.AddRange(new string[] {});
     }
 }
