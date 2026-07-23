@@ -44,6 +44,7 @@ set GameExePath=%ProjectRoot%\Build\Windows\%ProjectPureName%.exe
 
 rem Tests
 set TestNames=
+set TestNames=Snake
 set TestOutputLogPath=%ProjectRoot%\Build\Tests\Tests.log
 set ReportOutputPath=%ProjectRoot%\Build\Tests
 set ExcludedPathForTestReport=%SourceCodePath%\%ProjectPureName%\Tests
